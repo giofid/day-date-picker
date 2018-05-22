@@ -256,18 +256,18 @@ extension DayDatePickerView {
             NSLayoutConstraint(item: dayTableView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: dayTableView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: dayTableView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: dayTableView, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 0.4, constant: 0),
-
+            NSLayoutConstraint(item: dayTableView, attribute: .trailing, relatedBy: .equal, toItem: monthTableView, attribute: .leading, multiplier: 1, constant: 0),
+            
             NSLayoutConstraint(item: monthTableView, attribute: .leading, relatedBy: .equal, toItem: dayTableView, attribute: .trailing, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: monthTableView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: monthTableView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: monthTableView, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 1 / 3, constant: 0),
-
+            NSLayoutConstraint(item: monthTableView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 80),
+            
             NSLayoutConstraint(item: yearTableView, attribute: .leading, relatedBy: .equal, toItem: monthTableView, attribute: .trailing, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: yearTableView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: yearTableView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: yearTableView, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1, constant: 0),
-
+            NSLayoutConstraint(item: dayTableView, attribute: .width, relatedBy: .equal, toItem: yearTableView, attribute: .width, multiplier: 1.1, constant: 0),
             NSLayoutConstraint(item: overlayView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: overlayView, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: overlayView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0),
@@ -326,7 +326,13 @@ extension DayDatePickerView: UITableViewDataSource {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
         cell.selectionStyle = .none
         
-        cell.textLabel?.textAlignment = .center
+        if tableView == dayTableView {
+            cell.textLabel?.textAlignment = .right
+        } else if tableView == monthTableView {
+            cell.textLabel?.textAlignment = .center
+        } else if tableView == yearTableView {
+            cell.textLabel?.textAlignment = .left
+        }
         cell.textLabel?.font = textFont
         cell.backgroundColor = UIColor.white
         cell.textLabel?.textColor = textColor
