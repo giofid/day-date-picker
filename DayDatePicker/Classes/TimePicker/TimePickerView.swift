@@ -290,7 +290,6 @@ extension TimePickerView: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
         cell.selectionStyle = .none
-        cell.textLabel?.textAlignment = .center
         cell.textLabel?.font = _textFont
         cell.backgroundColor = UIColor.white
         cell.textLabel?.textColor = _textColor
@@ -304,7 +303,7 @@ extension TimePickerView: UITableViewDataSource {
             }
             
             cell.textLabel?.text = String(hour)
-            
+            cell.textLabel?.textAlignment = .right
             delegate?.customizeCell(cell: cell, atIndexPath: indexPath, forType: .hour)
         } else if tableView == minuteTableView {
             let minute = minuteRange.lowerBound + indexPath.row * minuteInterval
@@ -316,7 +315,8 @@ extension TimePickerView: UITableViewDataSource {
             }
             
             cell.textLabel?.text = String(time.minute)
-            
+            cell.textLabel?.textAlignment = .left
+
             delegate?.customizeCell(cell: cell, atIndexPath: indexPath, forType: .minute)
         }
         
