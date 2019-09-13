@@ -8,7 +8,7 @@
 import Foundation
 
 public extension TimePickerView {
-    public struct Time: Comparable {
+    struct Time: Comparable {
         public init(hour: Int, minute: Int) {
             self.hour = hour
             self.minute = minute
