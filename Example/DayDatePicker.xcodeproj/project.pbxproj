@@ -31,7 +31,7 @@
 /* Begin PBXFileReference section */
 		1E408B2F2028782E00B996E0 /* TimePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerViewController.swift; sourceTree = "<group>"; };
 		1E408B302028782E00B996E0 /* DayDatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayDatePickerViewController.swift; sourceTree = "<group>"; };
-		262D93E3B300E96A365CCC48 /* DayDatePicker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DayDatePicker.podspec; path = ../DayDatePicker.podspec; sourceTree = "<group>"; };
+		262D93E3B300E96A365CCC48 /* DayDatePicker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DayDatePicker.podspec; path = ../DayDatePicker.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2D11F8E469EB11C33A115033 /* Pods_DayDatePicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DayDatePicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DB0CA1B30CA1CFA29553532 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		447114AC89F85878C1C1CFAE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };

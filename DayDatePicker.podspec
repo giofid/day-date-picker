@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'DayDatePicker'
-  s.version          = '1.6'
+  s.version          = '1.7'
   s.summary          = 'A custom and customizable UIDatePicker which displays the day of the week alongside the day column'
 
   s.description      = <<-DESC
@@ -13,8 +13,7 @@ A custom and customizable UIDatePicker which displays the day of the week alongs
   s.author           = { 'hughbe' => 'hughbellars@gmail.com' }
   s.source           = { :git => 'https://github.com/hughbe/day-date-picker.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
-  s.swift_version = '4.0'
+  s.ios.deployment_target = '10'
 
   s.source_files = 'DayDatePicker/Classes/**/*'
   s.frameworks = 'UIKit'
