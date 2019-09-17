@@ -302,7 +302,7 @@ extension TimePickerView: UITableViewDataSource {
                 cell.textLabel?.textColor = UIColor.lightGray
             }
             
-            cell.textLabel?.text = String(hour)
+            cell.textLabel?.text = String(format: "%02d", hour)
             cell.textLabel?.textAlignment = .right
             delegate?.customizeCell(cell: cell, atIndexPath: indexPath, forType: .hour)
         } else if tableView == minuteTableView {
@@ -314,7 +314,7 @@ extension TimePickerView: UITableViewDataSource {
                 cell.textLabel?.textColor = UIColor.lightGray
             }
             
-            cell.textLabel?.text = String(time.minute)
+            cell.textLabel?.text = String(format: "%02d", time.minute)
             cell.textLabel?.textAlignment = .left
 
             delegate?.customizeCell(cell: cell, atIndexPath: indexPath, forType: .minute)
