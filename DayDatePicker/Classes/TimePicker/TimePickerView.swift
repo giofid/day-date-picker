@@ -58,7 +58,7 @@ public class TimePickerView: UIControl {
         get {
             return _maxTime
         } set {
-            setMinTime(minTime: newValue, animated: true)
+            setMaxTime(maxTime: newValue, animated: true)
         }
     }
 
@@ -429,7 +429,7 @@ extension TimePickerView {
             return _maxTime?.hour ?? MaxHour
         }
         set {
-            setMinTime(hour: newValue, minute: _maxTime?.minute ?? MaxMinute, animated: true)
+            setMaxTime(hour: newValue, minute: _maxTime?.minute ?? MaxMinute, animated: true)
         }
     }
     
@@ -439,7 +439,7 @@ extension TimePickerView {
             return _maxTime?.minute ?? MaxMinute
         }
         set {
-            setMinTime(hour: _maxTime?.hour ?? MaxHour, minute: newValue, animated: true)
+            setMaxTime(hour: _maxTime?.hour ?? MaxHour, minute: newValue, animated: true)
         }
     }
 
